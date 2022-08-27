@@ -1,21 +1,23 @@
-function Card() {
+import styles from './Card.module.scss';
+
+
+function Card(props) {
     return (
-        <div className="card">
-            <div className="favorite">
+        <div className={styles.card}>
+            <div className={styles.favorite} onClick={props.onFavorite}>
                 <img width={20} height={20} src="/img/heart_Un.png" alt="Unliked" />
             </div>
-            <img width={133} height={133} src="/img/food.png" alt="Food" />
-            <h5>Vegetarian food</h5>
+            <img width={133} height={133} src={props.imageUrl} alt="Food" />
+            <h5>{props.title} </h5>
             <div className="d-flex justify-between align-centr">
                 <div className="d-flex flex-column">
                     <span>Price:</span>
-                    <b>100$</b>
+                    <b>{props.price}$</b>
                 </div>
-                <button className="button">
+                <button className="button" onClick={props.onPlus}>
                     <img width={18} height={18} src="/img/plus.png" alt="Plus" />
                 </button>
             </div>
-
         </div>
     );
 }
