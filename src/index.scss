@@ -27,7 +27,7 @@ header {
 
 }
 
-h3,
+h1,
 p {
   margin: 0;
 }
@@ -40,20 +40,29 @@ content {
 
 
 
-.button {
-  background: rgb(37, 186, 14);
-  border: #1d221d;
-  box-sizing: border-box;
-  border-radius: 4px;
-  height: 30px;
-  width: 30px;
-  cursor: pointer;
-}
+// .button {
+//   background: rgb(37, 186, 14);
+//   border: #1d221d;
+//   box-sizing: border-box;
+//   border-radius: 4px;
+//   height: 30px;
+//   width: 30px;
+//   cursor: pointer;
+// }
 
 .search-block {
   border: 1px solid white;
   border-radius: 5px;
   padding: 0 0px;
+  position: relative;
+
+  .clear{
+    position: absolute;
+    right: 10px;
+    width: 18px;
+    height: 18px;
+    top: 10px;
+  }
 
   .search-png {
     margin-right: 12px;
